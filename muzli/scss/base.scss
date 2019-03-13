@@ -1,0 +1,39 @@
+//*{outline: 2px solid red}
+// import externeho scss suboru
+@import "variables";
+@import "mixins";
+@import "general";
+@import "typografia";
+@import "header";
+@import "colors";
+@import "content";
+@import "buttons";
+@import "footer";
+
+@import "pages/gallery";
+@import "pages/blog";
+@import "pages/home";
+@import "pages/contact";
+/*
+@media (max-width: 40em){
+  .pre-footer{
+    font-size: 85%;
+  }
+
+  .post-list{
+    width: 100%;
+  }
+
+  main h2 br{
+    .pre-footer p br{
+      display: none;
+    }
+  }
+
+  .gallery-img{
+    float: none;
+    width: 100%;
+    margin: .5% 0;
+  }
+}
+*/

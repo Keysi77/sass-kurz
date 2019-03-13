@@ -1,0 +1,68 @@
+// mixin pre zakladnu kostru buttonu
+// alebo spravit triedu ktoru neskor neincludovat ale extendovať (aby sa usetrel css kod)
+// include mixin - nakopiruje všeky riadky z mixtinu
+// extend .class- zluci vsetky classy do jedneho selektrora a ostatne vlastnosti sa budu len prebijat
+// placeholder exted %class- ak nechceme aby bol vo vyslednom css a nebude sa pouzivat,
+// ale bude len dedit vlastnosti .button -> %button
+// ale ak sa bude pouzivat, tak klasicky cez triedu .button
+@import "mixins";
+%button {
+  font:{
+    size: em(17);
+    family: $font-family-sans;
+  }
+  color: $color-text;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: em(34, 17) 0;
+  padding: em(34, 17) em(24,17);
+  border-radius: 6px;
+  @include rounded;
+}
+// cyklus pre kratši zapis
+// http://thesassway.com/intermediate/if-for-each-while
+@each $btn, $color in $button-colors{
+
+  .btn-#{$btn}{
+    @extend %button;
+    background-color: rgba($color,1);
+    &:hover, &:focus{
+      background-color: rgba($color,.85);
+    }
+    @if ($btn == 'white') {
+      color: $color-bg-body;
+    }
+    @else{
+      text-shadow: 1px 1px 0 darken($color, 15%);
+    }
+  }
+}
+
+
+/*
+
+// pre konkretny button vlozit zakladnu kostru
+.btn-red{
+  @extend %button;
+  background-color: rgba(253,104,91,1);
+  &:hover, &:focus{
+    background-color: rgba(253,104,91,.85);
+  }
+}
+.btn-green{
+  @extend %button;
+  background-color: rgba(57,174,144,1);
+  &:hover, &:focus{
+    background-color: rgba(57,174,144,.85);
+  }
+}
+.btn-yellow{
+  @extend %button;
+  background-color: rgba(254,205,94,1);
+  &:hover, &:focus{
+    background-color: rgba(254,205,94,.85);
+  }
+}
+*/

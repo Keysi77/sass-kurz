@@ -1,0 +1,44 @@
+// PREMENNE
+//------------------------------------------------------
+
+// premenne fonty
+$font-size-base: 150%;
+$font-family-sans: Montserrat, sans-serif;
+$font-family-serif: 'Big Caslon', Georgia, serif;
+
+// premenne farby
+$color-text: #fff;
+$color-muted: #777;
+$color-bg-body: #2f313c;
+$color-footer: #8c95ad;
+$color-sel: #FCBD24;
+
+/* pouzitie v poli: $page-colorsp
+$color-bg-gallery: #ffd256;
+$color-bg-home: #8FD2D1;
+$color-bg-blog: #019DCD;
+$color-bg-contact: #FD685B;
+*/
+// pole farieb - normalne zatvorky a oddelenie normlanou čiarkou (ako JSON)
+$page-colors: (
+	'home': #8FD2D1,
+	'gallery': #ffd256,
+	'blog': #019DCD,
+	'contact': #FD685B,
+  'buttons': hotpink,
+);
+// pole farieb pre tlačidla
+$button-colors: (
+	'default': #545766,
+	'red': #fd685b,
+	'green': #39ae90,
+	'yellow': #fecd5e,
+	'white': #ffffff,
+);
+// pri vytvarani novej stranky stači pridať len jeden riadok do pola a všetko sa zdedi
+$enable-rounded: true;
+
+// premenne pre @media
+$width-sm: 400px;
+$width-md: 640px;
+$width-lg: 1024px;

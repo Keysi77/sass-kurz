@@ -1,0 +1,71 @@
+// FARBY
+//-------------------nahradenie cyklom EACH
+//-------------------
+@each $page, $color in $page-colors{
+  .#{$page}{
+    main{
+      background: $color;
+      border-top: 1px solid darken( $color, 10%);
+    }
+    .shadow{text-shadow:-1px 1px 0px darken($color, 10%); }
+    .active a {color: darken($color, 25%);}
+  }
+}
+
+
+
+// miesto EACH pouzit takto:
+/*
+.home{
+	main{
+			background-color: $color-bg-home;
+			border-top: 1px solid darken($color-bg-home, 20%);
+	}
+	.shadow{
+		text-shadow: -1px 1px 0px darken($color-bg-home, 10%);
+	}
+	.active a{
+		color: darken($color-bg-home, 25%);
+		}
+	}
+
+.gallery{
+	main{
+			background-color: $color-bg-gallery;
+			border-top: 1px solid darken($color-bg-gallery, 20%);
+	}
+	.shadow{
+		text-shadow: -1px 1px 0px darken($color-bg-gallery, 10%);
+	}
+	.active a{
+			color: darken($color-bg-gallery, 25%);
+		}
+	}
+
+.blog{
+	main{
+			background-color: $color-bg-blog;
+			border-top: 1px solid darken($color-bg-blog, 20%);
+	}
+	.shadow{
+		text-shadow: -1px 1px 0px darken($color-bg-blog, 10%);
+	}
+	.active a{
+			color: darken($color-bg-blog, 25%);
+		}
+	}
+
+.contact{
+	main{
+			background-color: $color-bg-contact;
+			border-top: 1px solid darken($color-bg-contact, 20%);
+	}
+	.shadow{
+		text-shadow: -1px 1px 0px darken($color-bg-contact, 10%);
+	}
+	.active a{
+			color: darken($color-bg-contact, 25%);
+		}
+	}
+*/
+// pre kazdu page z page colors pridaj farbu z pola: home, gallery....

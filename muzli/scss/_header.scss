@@ -1,0 +1,19 @@
+// header
+// ------------------------------------------------------
+//
+.site-header{
+	background: #777;
+}
+nav{
+	a{
+		color: $color-muted;
+		font-size: em(13);
+		padding: em(24,13) em(8,13);
+		// parent selector &
+		&:hover,
+		&:focus{
+			color: lighten($color-muted, 20%)
+		}
+
+	}
+}

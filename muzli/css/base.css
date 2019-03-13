@@ -1,0 +1,412 @@
+/* pouzitie v poli: $page-colorsp
+$color-bg-gallery: #ffd256;
+$color-bg-home: #8FD2D1;
+$color-bg-blog: #019DCD;
+$color-bg-contact: #FD685B;
+*/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+::-moz-selection {
+  background-color: #FCBD24;
+  color: #fff; }
+
+::-o-selection {
+  background-color: #FCBD24;
+  color: #fff; }
+
+::selection {
+  background-color: #FCBD24;
+  color: #fff; }
+
+section {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+body {
+  font-size: 150%;
+  font-family: Montserrat, sans-serif;
+  font-weight: normal;
+  /* miesto tohto zapisu pouzit vnorovanie
+    font-size: $font-size-base;
+  	font-family: $font-family-sans;
+  	font-weight: normal;
+  */
+  color: #fff;
+  background: #2f313c;
+  text-align: center;
+  margin: 0; }
+
+.container {
+  max-width: 64em;
+  margin: 0 auto;
+  padding: 0 1em; }
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: .5s all ease-in-out; }
+
+img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle; }
+
+.menu {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none; }
+  .menu li, .menu a {
+    display: inline-block; }
+
+h1 {
+  border-top: 1px solid #hotpink;
+  border-left: 3em dotted #bada55;
+  padding-top: 2em;
+  padding-right: 20em; }
+
+h1, h2, h3 {
+  margin: 0;
+  line-height: 1; }
+
+h1 {
+  font-size: 4.6875em;
+  text-transform: uppercase;
+  margin-bottom: 0.2933333333em; }
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.3333333333em;
+  font-weight: normal; }
+
+h3 {
+  font-size: 1.375em; }
+
+.small {
+  font-size: 75%;
+  line-height: 1.5;
+  margin: 0; }
+
+.site-header {
+  background: #fff; }
+
+nav a {
+  color: #777;
+  font-size: 0.8125em;
+  padding: 1.8461538462em 0.6153846154em; }
+  nav a:hover, nav a:focus {
+    color: #aaaaaa; }
+
+.home main {
+  background: #8FD2D1;
+  border-top: 1px solid #6bc3c2; }
+.home .shadow {
+  text-shadow: -1px 1px 0px #6bc3c2; }
+.home .active a {
+  color: #41a19f; }
+
+.gallery main {
+  background: #ffd256;
+  border-top: 1px solid #ffc423; }
+.gallery .shadow {
+  text-shadow: -1px 1px 0px #ffc423; }
+.gallery .active a {
+  color: #d69d00; }
+
+.blog main {
+  background: #019DCD;
+  border-top: 1px solid #01769a; }
+.blog .shadow {
+  text-shadow: -1px 1px 0px #01769a; }
+.blog .active a {
+  color: #003c4e; }
+
+.contact main {
+  background: #FD685B;
+  border-top: 1px solid #fc3a29; }
+.contact .shadow {
+  text-shadow: -1px 1px 0px #fc3a29; }
+.contact .active a {
+  color: #d61403; }
+
+.buttons main {
+  background: hotpink;
+  border-top: 1px solid #ff369b; }
+.buttons .shadow {
+  text-shadow: -1px 1px 0px #ff369b; }
+.buttons .active a {
+  color: #e90074; }
+
+/*
+.home{
+	main{
+			background-color: $color-bg-home;
+			border-top: 1px solid darken($color-bg-home, 20%);
+	}
+	.shadow{
+		text-shadow: -1px 1px 0px darken($color-bg-home, 10%);
+	}
+	.active a{
+		color: darken($color-bg-home, 25%);
+		}
+	}
+
+.gallery{
+	main{
+			background-color: $color-bg-gallery;
+			border-top: 1px solid darken($color-bg-gallery, 20%);
+	}
+	.shadow{
+		text-shadow: -1px 1px 0px darken($color-bg-gallery, 10%);
+	}
+	.active a{
+			color: darken($color-bg-gallery, 25%);
+		}
+	}
+
+.blog{
+	main{
+			background-color: $color-bg-blog;
+			border-top: 1px solid darken($color-bg-blog, 20%);
+	}
+	.shadow{
+		text-shadow: -1px 1px 0px darken($color-bg-blog, 10%);
+	}
+	.active a{
+			color: darken($color-bg-blog, 25%);
+		}
+	}
+
+.contact{
+	main{
+			background-color: $color-bg-contact;
+			border-top: 1px solid darken($color-bg-contact, 20%);
+	}
+	.shadow{
+		text-shadow: -1px 1px 0px darken($color-bg-contact, 10%);
+	}
+	.active a{
+			color: darken($color-bg-contact, 25%);
+		}
+	}
+*/
+.content {
+  padding-top: 5em;
+  padding-bottom: 5em; }
+
+@media (max-width: 640px) {
+  main {
+    font-size: 85%; }
+    main h2 br {
+      display: none; }
+
+  .content {
+    padding-top: 5em;
+    padding-bottom: 5em; } }
+.btn-default, .btn-red, .btn-green, .btn-yellow, .btn-white {
+  font-size: 1.0625em;
+  font-family: Montserrat, sans-serif;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 2em 0;
+  padding: 2em 1.4117647059em;
+  border-radius: 6px;
+  border-radius: 0.375em; }
+
+.btn-default {
+  background-color: #545766;
+  text-shadow: 1px 1px 0 #31333c; }
+  .btn-default:hover, .btn-default:focus {
+    background-color: rgba(84, 87, 102, 0.85); }
+
+.btn-red {
+  background-color: #fd685b;
+  text-shadow: 1px 1px 0 #fc220f; }
+  .btn-red:hover, .btn-red:focus {
+    background-color: rgba(253, 104, 91, 0.85); }
+
+.btn-green {
+  background-color: #39ae90;
+  text-shadow: 1px 1px 0 #267460; }
+  .btn-green:hover, .btn-green:focus {
+    background-color: rgba(57, 174, 144, 0.85); }
+
+.btn-yellow {
+  background-color: #fecd5e;
+  text-shadow: 1px 1px 0 #feb512; }
+  .btn-yellow:hover, .btn-yellow:focus {
+    background-color: rgba(254, 205, 94, 0.85); }
+
+.btn-white {
+  background-color: white;
+  color: #2f313c; }
+  .btn-white:hover, .btn-white:focus {
+    background-color: rgba(255, 255, 255, 0.85); }
+
+/*
+
+// pre konkretny button vlozit zakladnu kostru
+.btn-red{
+  @extend %button;
+  background-color: rgba(253,104,91,1);
+  &:hover, &:focus{
+    background-color: rgba(253,104,91,.85);
+  }
+}
+.btn-green{
+  @extend %button;
+  background-color: rgba(57,174,144,1);
+  &:hover, &:focus{
+    background-color: rgba(57,174,144,.85);
+  }
+}
+.btn-yellow{
+  @extend %button;
+  background-color: rgba(254,205,94,1);
+  &:hover, &:focus{
+    background-color: rgba(254,205,94,.85);
+  }
+}
+*/
+.pre-footer {
+  background: #363845;
+  padding: 4.25em 0 4.5em; }
+  .pre-footer p {
+    color: #e6e6e6;
+    font-size: 1.125em;
+    line-height: 1.5555555556em;
+    margin: 1.5555555556em 0 1.6666666667em; }
+  .pre-footer .btn {
+    margin: 0;
+    font-size: 85%; }
+  @media (max-width: 640px) {
+    .pre-footer {
+      font-size: 85%;
+      padding: 3.375em 0 4em; }
+      .pre-footer p br {
+        display: none; } }
+
+.site-footer {
+  padding: 1.875em 0;
+  color: #8c95ad; }
+  .site-footer a, .site-footer span {
+    color: rgba(140, 149, 173, 0.5); }
+  .site-footer a {
+    border-bottom: 1px solid #434a5d; }
+    .site-footer a:hover, .site-footer a:focus {
+      color: rgba(255, 0, 0, 0.5);
+      border-bottom: 1px solid rgba(255, 0, 0, 0.5); }
+  .site-footer span {
+    padding-left: 1em; }
+
+.image-grid {
+  margin-top: 3em; }
+  .image-grid img {
+    float: left;
+    width: 49%;
+    margin: .5%;
+    border-radius: 4px; }
+    @media (max-width: 40em) {
+      .image-grid img {
+        float: none;
+        width: 100%;
+        margin: .5em 0; } }
+  .image-grid:before, .image-grid:after {
+    content: " ";
+    display: table; }
+  .image-grid:after {
+    clear: both; }
+
+.post-list {
+  max-width: 43.5em;
+  margin: 5.375em auto 0;
+  text-align: left; }
+  .post-list .post {
+    margin: 4em 0;
+    line-height: 1.6875em; }
+    .post-list .post p {
+      color: rgba(255, 255, 255, 0.9); }
+  .post-list .post-title {
+    font-size: 1.875em;
+    margin-bottom: 1.1333333333em;
+    text-transform: none; }
+  .post-list .load-older {
+    margin-top: 0; }
+
+.bigass {
+  margin-top: 2.75em;
+  border-radius: 0.75em 0.75em 0 0; }
+
+.home .content {
+  padding-bottom: 0; }
+
+.contact-form {
+  max-width: 35em;
+  margin: 4.5em auto 0;
+  text-align: left; }
+  .contact-form label {
+    font-size: 1.0625em;
+    display: block;
+    margin-bottom: 1.375em; }
+  .contact-form .btn {
+    font-size: 85%;
+    margin-top: 0; }
+    .contact-form .btn padding {
+      left: 2.5em;
+      right: 2.5em; }
+
+input,
+textarea {
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  outline: none;
+  padding: 0.625em;
+  margin-top: 0.375em;
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 0.3125em; }
+  input font,
+  textarea font {
+    size: 0.875em;
+    family: Montserrat, sans-serif;
+    weight: normal; }
+  input:focus,
+  textarea:focus {
+    background-color: rgba(255, 255, 255, 0.5); }
+
+/*
+@media (max-width: 40em){
+  .pre-footer{
+    font-size: 85%;
+  }
+
+  .post-list{
+    width: 100%;
+  }
+
+  main h2 br{
+    .pre-footer p br{
+      display: none;
+    }
+  }
+
+  .gallery-img{
+    float: none;
+    width: 100%;
+    margin: .5% 0;
+  }
+}
+*/
+
+/*# sourceMappingURL=base.css.map */

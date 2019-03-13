@@ -1,0 +1,20 @@
+.image-grid{
+  margin-top: em(48);
+  img{
+
+    float: left;
+    width: 49%;
+    margin: .5%;
+    @include rounded(4px);
+      // aby sa po zmenšeni stranky dali obrazky pod seba a
+      // nezmensovali s donekonečna
+    @media( max-width: em(640)){
+    &{
+      float: none;
+      width: 100%;
+      margin: .5em 0;
+    }
+  }
+}
+@include clearfix;
+}

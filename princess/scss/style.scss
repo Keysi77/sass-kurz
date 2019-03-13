@@ -1,0 +1,73 @@
+@function em( $size, $context: 16 ) {
+	@return ( $size / $context ) * 1em;
+}
+
+@mixin font-size( $size, $context: 16 ) {
+	font-size: em( $size, $context );
+}
+
+
+
+
+// general
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+// clearfix
+.group:before,
+.group:after { content: " "; display: table; }
+.group:after { clear: both; }
+
+
+body {
+	color: #8F190F;
+	font-size: 100%;
+	font-family: 'Trebuchet MS', Verdana, serif;
+	font-weight: bold;
+	background: #e64134;
+	padding: 3em;
+	-webkit-font-smoothing: antialiased;
+}
+
+h2 { margin-top: 0; }
+p  { margin-bottom: 0; }
+
+article {
+	width: em(540);
+	padding: em(30);
+	margin: 0 auto;
+	background: #f6be00;
+	border: em(4) solid white;
+	border-radius: em(20);
+}
+
+h2 {
+	@include font-size(26);
+	text-transform: uppercase;
+}
+
+small {
+	color: #BA271B;
+}
+
+.text {
+	@include font-size(18);
+}
+
+.text p {
+	line-height: em(24, 18);
+}
+
+.text p:last-child {
+	line-height: em(16, 18);
+}
+
+.text small {
+	@include font-size(14, 18);
+}
+
+img {
+	float: left;
+	margin: 0 em(24, 18) em(10, 18) 0;
+	width: em(100, 18);
+}

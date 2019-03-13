@@ -1,0 +1,17 @@
+-> nainstalovat ruby
+
+-> gem install sass  -- instalacia sass-ka (powershell, cmder, nie cmd)
+ 
+-> nastavit cestu, kde je ulozeny projekt: cd/....
+
+-> nastavi sledovanie: sass --watch scss/main.scss:css/main.css
+
+-> aby prepisoval subor css: sass --watch scss/:css/
+
+-> nastavenie typu css:
+--style=compact  
+--style=compressed    - bez riadkov a odstavcou na export pre prehlaidaè
+--style=nested  
+--style=expanded
+ 
+-> do atomu treba nainštalovat: https://atom.io/packages/linter-scss-lint

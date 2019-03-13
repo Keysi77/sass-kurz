@@ -1,0 +1,45 @@
+//
+//	MIXINS
+// ------------------------------------------------------
+// funkcia em prepocita px -> em
+@function em( $size, $context: 16 ) {
+  @return ( $size / $context ) * 1em;
+}
+
+@mixin box-sizing( $value ) {
+	-webkit-box-sizing: $value;
+	   -moz-box-sizing: $value;
+	        box-sizing: $value;
+}
+
+@mixin font-size( $size, $context: 16 ) {
+	font-size: em( $size, $context );
+}
+
+
+@mixin container( $width ) {
+	max-width: $width;
+	margin: 0 auto;
+}
+
+// vseobecny clearfix, ktory sa da pouzit vsade
+// pomocou mixinu
+@mixin clearfix {
+	&:before,
+	&:after { content: " "; display: table; }
+	&:after { clear: both; }
+}
+
+// nastavi radius ako def hodnotu 20px
+// ak nezadame vzdy ju nastavi na 20px
+@mixin rounded($radius: em(6) ){
+  @if ( $enable-rounded ) {
+    border-radius: $radius;
+  }
+}
+
+@mixin selection {
+  ::-moz-selection{ @content }
+  ::-o-selection{@content}
+  ::selection{@content}
+}
